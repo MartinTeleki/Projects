@@ -103,7 +103,37 @@ img {
 {transform: translateX(20px) translateY(-55px)}
 
 .btn--openBracket
-{transform: translateX(-15px) translateY(-50px)}
+{transform: translateX(-15px) translateY(-49.5px)}
 
 .btn--closeBracket
 {transform: translateX(20px) translateY(-80px)}
+
+.btn--zero
+{transform: translateX(20px) translateY(-80px)}
+
+.btn--one
+{transform: translateX(-60px) translateY(-80px)}
+
+.btn--two
+{transform: translateX(20px) translateY(-80px)}
+
+.btn--three
+{transform: translateX(20px) translateY(-80px)}
+
+.btn--four
+{transform: translateX(-60px) translateY(-80px)}
+
+.btn--five
+{transform: translateX(20px) translateY(-80px)}
+
+.btn--six
+{transform: translateX(20px) translateY(-80px)}
+
+.btn--seven
+{transform: translateX(20px) translateY(-80px)}
+
+.btn--eight
+{transform: translateX(20px) translateY(-80px)}
+
+.btn--nine
+{transform: translateX(-60px) translateY(-80px)}
