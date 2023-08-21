@@ -1,0 +1,109 @@
+:root{
+    --body-bg-color: steelblue;
+}
+
+
+
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--body-bg-color);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    min-height: 100vh;
+     
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid black; 
+    padding: 20px; 
+    background-color: white; 
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid black; 
+    padding: 10px; 
+}
+
+.input--text-1,
+.input--text-2 {
+    width: 120px;
+    height: 30px;
+    text-align: center;
+    justify-content: center;
+    margin: 5px;
+}
+
+.btn--result {
+    width: 120px;
+    height: 30px;
+    margin: 10px;
+}
+
+.btn-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn {
+    width: 30px;
+    height: 30px;
+    border: 1px solid black;
+    cursor: pointer;
+    
+}
+
+.result {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    border: 2px solid black; 
+    padding: 10px;
+    margin-top: 20px;
+    width: 100px;
+    color: black;
+}
+
+img {
+
+    width: 15px;
+    height: 15px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    
+    
+    
+}
+
+.btn--plus
+{
+    transform: translateX(-15px);
+}
+.btn--minus
+{transform: translateX(20px) translateY(-30px)}
+.btn--times{
+    transform: translateX(-15px) translateY(-25px)
+
+}
+.btn--divided
+{transform: translateX(20px) translateY(-55px)}
+
+.btn--openBracket
+{transform: translateX(-15px) translateY(-50px)}
+
+.btn--closeBracket
+{transform: translateX(20px) translateY(-80px)}
