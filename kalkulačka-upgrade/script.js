@@ -31,23 +31,37 @@ const writeNumber = document.querySelector(".input--text-1");
 
 const historyContainer = document.querySelector(".history");
 const historyList = document.querySelector(".history-list");
+const historyText = document.querySelector(".history-li");
 const closeButton = document.querySelector(".btn--close");
 
 const previousResults = [];
+let firstDisplay = true;
+
 console.log(previousResults);
 
 closeButton.addEventListener("click", () => {});
 
 const appendToHistory = (result) => {
   const listItem = document.createElement("li");
+  listItem.classList.add("history-li");
   listItem.textContent = result;
+  listItem.style.opacity = 0;
   historyList.appendChild(listItem);
+
+  const delay = firstDisplay ? 700 : 350;
+  firstDisplay = false;
+
+  setTimeout(() => {
+    listItem.style.opacity = 1;
+  }, delay);
 };
 
 const performanceCalculation = () => {
   const text = writeNumber.value;
+  //console.log("Text:", text);
   try {
     const result = eval(text);
+    //console.log(result);
 
     const roundedResult = result.toFixed(2);
     displayResult.style.color = "black";
@@ -57,6 +71,7 @@ const performanceCalculation = () => {
     appendToHistory(roundedResult);
     historyContainer.style.opacity = 1;
   } catch (error) {
+    //console.log("Chyba:", error);
     writeNumber.value = "";
     displayResult.style.color = "red";
     displayResult.textContent = "Error";
@@ -64,13 +79,20 @@ const performanceCalculation = () => {
   }
 };
 
-calculateResult.addEventListener("click", performanceCalculation);
+calculateResult.addEventListener("click", () => {
+  previousResults.splice(0, previousResults.length);
+  historyList.innerHTML = "";
+});
 
 writeNumber.addEventListener("keydown", (e) => {
   if (e.key === "Enter") {
     e.preventDefault();
     performanceCalculation();
   }
+});
+
+closeButton.addEventListener("click", () => {
+  historyContainer.style.opacity = 0;
 });
 
 const appendSymbol = (symbol) => {
